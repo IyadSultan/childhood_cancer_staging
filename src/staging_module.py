@@ -24,60 +24,8 @@ class PediatricCancerStaging:
             model: The OpenAI model to use
         """
         self.model = model
-        
-        # Try to use the provided staging data path first
-        try:
-            self.staging_data = self._load_staging_data(staging_data_path)
-            print(f"Successfully loaded staging data from {staging_data_path}")
-        except Exception as e:
-            # If the original file fails, try to use fixed_staging.json as a fallback
-            print(f"Error loading staging data from {staging_data_path}: {e}")
-            fixed_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "fixed_staging.json")
-            if os.path.exists(fixed_path):
-                print(f"Attempting to use fixed staging data from {fixed_path}")
-                try:
-                    self.staging_data = self._load_staging_data(fixed_path)
-                    print("Successfully loaded fixed staging data")
-                except Exception as e2:
-                    print(f"Error loading fixed staging data: {e2}")
-                    # If both fail, use the minimal fallback data
-                    self.staging_data = self._get_minimal_staging_data()
-                    print("Using minimal fallback staging data for Wilms Tumor only")
-            else:
-                print("Fixed staging data not found, using minimal fallback data")
-                self.staging_data = self._get_minimal_staging_data()
-                
+        self.staging_data = self._load_staging_data(staging_data_path)
         self.agents = CancerStagingAgents(model=model)
-        
-    def _get_minimal_staging_data(self) -> Dict[str, Any]:
-        """
-        Returns a minimal set of staging data for Wilms Tumor as a fallback.
-        
-        Returns:
-            Dict: Minimal staging data
-        """
-        return {
-            "Wilms Tumor (Renal Tumors)": {
-                "criteria": [
-                    "Whether patient received pre-surgical chemotherapy (treatment protocol: COG vs SIOP)",
-                    "Presence of distant metastases at diagnosis",
-                    "Involvement of regional (abdominal) lymph nodes",
-                    "Any biopsy of the tumor prior to resection (and type, depending on protocol)",
-                    "Whether tumor was completely excised at surgery",
-                    "Whether tumor was confined to the kidney or extended beyond"
-                ],
-                "stages": {
-                    "Stage I": "Tumor limited to the kidney and completely resected. The renal capsule is intact (no tumor rupture), no invasion of renal sinus vessels, no residual tumor, no lymph node or distant metastasis, no preoperative tumor biopsy, and surgical margins are clear.",
-                    "Stage II": "Tumor extends beyond the kidney but is completely resected. This includes tumor penetration of the renal capsule or involvement of the renal sinus (lymphatics or veins), or tumor invasion into the renal vein, but with negative margins. No lymph node or distant metastasis.",
-                    "Stage III": "Residual non-hematogenous tumor is present in the abdomen after surgery, or tumor implants/spillage. This can include: involvement of abdominal (regional) lymph nodes; peritoneal contamination or tumor implants; any tumor spillage (before or during surgery); gross or microscopic residual tumor remaining post-surgery; tumor not completely resected due to biopsy prior to removal (including fine-needle aspiration); or tumor at surgical margins.",
-                    "Stage IV": "Hematogenous metastases or distant metastasis present at diagnosis (e.g., lung, liver, bone, brain, or distant lymph nodes beyond the abdomen)."
-                },
-                "definitions": {
-                    "Bilateral disease": "If both kidneys are involved (synchronous bilateral Wilms tumors), it should be recorded, but staging is determined by the kidney with more advanced disease.",
-                    "Staging systems": "COG (National Wilms Tumor Study) staging applies to tumors without preoperative chemotherapy; SIOP (International Society of Paediatric Oncology) staging applies to tumors after preoperative chemotherapy. 'y-' prefix stages indicate SIOP (post-therapy) staging."
-                }
-            }
-        }
         
     def _load_staging_data(self, staging_data_path: str) -> Dict[str, Any]:
         """
@@ -93,16 +41,13 @@ class PediatricCancerStaging:
             with open(staging_data_path, 'r', encoding='utf-8') as f:
                 content = f.read()
                 
-            # First try to load the JSON directly
+            # Load the JSON data
             try:
                 return json.loads(content)
             except json.JSONDecodeError as e:
                 print(f"JSON decode error: {e}")
-                
-                # Try to fix common JSON syntax errors
+                # Attempt to fix the JSON if there are still any issues
                 content = self._fix_json_syntax(content)
-                
-                # Try to parse the fixed JSON
                 return json.loads(content)
                 
         except Exception as e:

@@ -34,9 +34,9 @@ def main():
     disable_crewai_telemetry()
 
     parser = argparse.ArgumentParser(description="Run the cancer staging module on a medical note.")
-    parser.add_argument("--use_original", action="store_true", help="Use the original Toronto staging data")
     parser.add_argument("--note", default="example.txt", help="Path to the medical note to process")
     parser.add_argument("--output", default="results.csv", help="Path to save the CSV results")
+    parser.add_argument("--staging_data", default="toronoto_staging.json", help="Path to the Toronto staging data file")
     args = parser.parse_args()
     
     # Set up OpenAI API key
@@ -48,18 +48,14 @@ def main():
     
     os.environ["OPENAI_API_KEY"] = api_key
     
-    # Determine which staging data to use
-    if args.use_original:
-        staging_data_path = "toronoto_staging.json"
-        print("Using original Toronto staging data")
-    else:
-        staging_data_path = "fixed_staging.json"
-        print("Using fixed Toronto staging data")
-    
+    # Check if staging data file exists
+    staging_data_path = args.staging_data
     if not Path(staging_data_path).exists():
         print(f"Error: Staging data file not found at {staging_data_path}")
-        print("Please make sure the staging data file is in the project root directory.")
+        print("Please make sure the staging data file exists.")
         sys.exit(1)
+    
+    print(f"Using staging data from: {staging_data_path}")
     
     # Create the staging module
     staging_module = PediatricCancerStaging(
@@ -67,7 +63,7 @@ def main():
         model="gpt-4o-mini"
     )
     
-    # Process the example medical note
+    # Process the medical note
     note_path = args.note
     output_path = args.output
     

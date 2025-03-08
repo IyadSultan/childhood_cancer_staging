@@ -56,14 +56,14 @@ This module analyzes medical notes to identify cancer types and determine approp
 The easiest way to use the module is with the provided example script:
 
 ```
-# Use the fixed staging data (recommended)
+# Process the example medical note
 python run_example.py
-
-# Use the original staging data
-python run_example.py --use_original
 
 # Process a different medical note
 python run_example.py --note path/to/medical_note.txt --output results.csv
+
+# Use a different staging data file
+python run_example.py --staging_data path/to/staging_data.json
 ```
 
 ### Using the Main Script
@@ -77,9 +77,9 @@ python main.py --note path/to/medical_note.txt --output results.csv --staging_da
 ### Command-line Arguments
 
 #### run_example.py
-- `--use_original`: Use the original Toronto staging data (default: use fixed_staging.json)
 - `--note`: Path to the medical note to process (default: example.txt)
 - `--output`: Path to save the CSV results (default: results.csv)
+- `--staging_data`: Path to the Toronto staging data file (default: toronoto_staging.json)
 
 #### main.py
 - `--note`: Path to the medical note to process (default: example.txt)
@@ -89,12 +89,9 @@ python main.py --note path/to/medical_note.txt --output results.csv --staging_da
 
 ## Staging Data
 
-The module uses the Toronto staging system for pediatric cancers:
+The module uses the Toronto staging system for pediatric cancers stored in `toronoto_staging.json`. This file contains comprehensive staging information for 15 different pediatric cancer types, with criteria, stages, and definitions for each type.
 
-- **Original Data**: `toronoto_staging.json` contains the original staging information for all supported cancer types, but with some JSON syntax issues
-- **Fixed Data**: `fixed_staging.json` contains the same information with corrected JSON syntax
-
-The module will attempt to use the specified staging data file first. If there are issues parsing it, it will try to automatically fix the JSON errors. If that fails, it will fall back to a fixed version of the file if available. As a last resort, it will use a minimal staging dataset for Wilms Tumor only.
+The module will automatically attempt to fix any JSON syntax errors if they are encountered when loading the staging data.
 
 ## Output Format
 
@@ -115,8 +112,7 @@ The module produces a CSV file with the following columns:
 ├── README.md                # This file
 ├── project_status.md        # Current project status
 ├── example.txt              # Example medical note
-├── toronoto_staging.json    # Original Toronto staging system data
-├── fixed_staging.json       # Fixed Toronto staging system data
+├── toronoto_staging.json    # Toronto staging system data
 ├── .env.example             # Example environment file
 └── src/                     # Source code
     ├── __init__.py          # Package initialization

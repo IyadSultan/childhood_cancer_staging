@@ -1,372 +1,371 @@
 {
-    "Acute Lymphoblastic Leukemia": {
-      "criteria": [
-        "Clinical signs of central nervous system (CNS) involvement (e.g. cranial nerve palsy, etc.)",
-        "Blasts in cerebrospinal fluid (CSF) (by cytospin examination)",
-        "White blood cell (WBC) count and red blood cell (RBC) count in CSF (cytospin)",
-        "WBC and RBC counts in peripheral blood"
-      ],
-      "stages": {
-        "CNS1": "No CNS involvement: no clinical signs of CNS disease and no blasts in the CSF.",
-        "CNS2": "Blasts present in CSF but with low cell counts indicative of a traumatic tap: blasts in CSF with either CSF WBC <5/µL, or if CSF WBC ≥5/µL then CSF RBC ≥10/µL and a WBC/RBC ratio in CSF ≤2× the WBC/RBC ratio in blood.",
-        "CNS3": "Definite CNS involvement: presence of clinical signs of CNS disease or blasts in CSF with CSF WBC ≥5/µL (not attributable to traumatic tap). (If CSF RBC ≥10/µL, then CNS3 requires a CSF WBC/RBC ratio >2× the blood WBC/RBC ratio.)"
-      ],
-      "definitions": {
-        "Blasts in CSF": "Cytospin examination of CSF is required to detect blasts. If blasts are described as 'occasional' or 'seen', they are considered present. If blasts are not mentioned, they are assumed absent.",
-        "Clinical signs of CNS involvement": "Signs such as cranial nerve palsies (e.g. facial weakness, ptosis), brain/eye involvement, or hypothalamic syndrome. (Note: symptoms like isolated severe headaches or eye swelling without neurological signs do not by themselves constitute CNS involvement.)"
-      }
+  "Acute Lymphoblastic Leukemia": {
+    "criteria": [
+      "Clinical signs of central nervous system (CNS) involvement (e.g. cranial nerve palsy, etc.)",
+      "Blasts in cerebrospinal fluid (CSF) (by cytospin examination)",
+      "White blood cell (WBC) count and red blood cell (RBC) count in CSF (cytospin)",
+      "WBC and RBC counts in peripheral blood"
+    ],
+    "stages": {
+      "CNS1": "No CNS involvement: no clinical signs of CNS disease and no blasts in the CSF.",
+      "CNS2": "Blasts present in CSF but with low cell counts indicative of a traumatic tap: blasts in CSF with either CSF WBC <5/µL, or if CSF WBC ≥5/µL then CSF RBC ≥10/µL and a WBC/RBC ratio in CSF ≤2× the WBC/RBC ratio in blood.",
+      "CNS3": "Definite CNS involvement: presence of clinical signs of CNS disease or blasts in CSF with CSF WBC ≥5/µL (not attributable to traumatic tap). (If CSF RBC ≥10/µL, then CNS3 requires a CSF WBC/RBC ratio >2× the blood WBC/RBC ratio.)"
     },
-    "Hodgkin Lymphoma": {
-      "criteria": [
-        "Presence of constitutional symptoms (fever, night sweats, weight loss)",
-        "Diffuse or disseminated involvement of one or more extra-lymphatic organs",
-        "Any isolated (non-contiguous) extra-lymphatic organ involvement",
-        "Involvement of the liver",
-        "Involvement of the lungs",
-        "Bone marrow involvement (from biopsy)",
-        "Central nervous system (CNS) involvement (CSF examination)",
-        "Number of lymph node regions involved (above and below the diaphragm)",
-        "Number of extra-lymphatic organs or sites involved (above and below diaphragm)"
-      ],
-      "stages": {
-        "Stage I": "Involvement of a single lymph node region OR a single extra-lymphatic organ or site without any lymph node involvement.",
-        "Stage II": "Involvement of two or more lymph node regions on the same side of the diaphragm OR localized involvement of a single extra-lymphatic organ/site with regional lymph node involvement (with or without other contiguous lymph node regions on the same side of the diaphragm).",
-        "Stage III": "Involvement of lymph node regions on both sides of the diaphragm. This may be accompanied by extension to an adjacent extra-lymphatic organ (direct extension from a lymph node mass) and/or involvement of the spleen.",
-        "Stage IV": "Disseminated (multifocal) involvement of one or more extra-lymphatic organs with or without lymph node involvement, OR any isolated extra-lymphatic organ involvement with distant (non-adjacent) nodal involvement. Any involvement of liver, bone marrow, lungs (not by direct spread), or cerebrospinal fluid is classified as Stage IV."
-      ],
-      "definitions": {
-        "Constitutional symptoms": "Referred to as B symptoms. Suffix 'A' (no constitutional symptoms) or 'B' (presence of constitutional symptoms) is added to the stage. Constitutional symptoms include: unexplained fever >38°C, drenching night sweats, and unexplained weight loss >10% of body weight in 6 months."
-      }
+    "definitions": {
+      "Blasts in CSF": "Cytospin examination of CSF is required to detect blasts. If blasts are described as 'occasional' or 'seen', they are considered present. If blasts are not mentioned, they are assumed absent.",
+      "Clinical signs of CNS involvement": "Signs such as cranial nerve palsies (e.g. facial weakness, ptosis), brain/eye involvement, or hypothalamic syndrome. (Note: symptoms like isolated severe headaches or eye swelling without neurological signs do not by themselves constitute CNS involvement.)"
+    }
+  },
+  "Hodgkin Lymphoma": {
+    "criteria": [
+      "Presence of constitutional symptoms (fever, night sweats, weight loss)",
+      "Diffuse or disseminated involvement of one or more extra-lymphatic organs",
+      "Any isolated (non-contiguous) extra-lymphatic organ involvement",
+      "Involvement of the liver",
+      "Involvement of the lungs",
+      "Bone marrow involvement (from biopsy)",
+      "Central nervous system (CNS) involvement (CSF examination)",
+      "Number of lymph node regions involved (above and below the diaphragm)",
+      "Number of extra-lymphatic organs or sites involved (above and below diaphragm)"
+    ],
+    "stages": {
+      "Stage I": "Involvement of a single lymph node region OR a single extra-lymphatic organ or site without any lymph node involvement.",
+      "Stage II": "Involvement of two or more lymph node regions on the same side of the diaphragm OR localized involvement of a single extra-lymphatic organ/site with regional lymph node involvement (with or without other contiguous lymph node regions on the same side of the diaphragm).",
+      "Stage III": "Involvement of lymph node regions on both sides of the diaphragm. This may be accompanied by extension to an adjacent extra-lymphatic organ (direct extension from a lymph node mass) and/or involvement of the spleen.",
+      "Stage IV": "Disseminated (multifocal) involvement of one or more extra-lymphatic organs with or without lymph node involvement, OR any isolated extra-lymphatic organ involvement with distant (non-adjacent) nodal involvement. Any involvement of liver, bone marrow, lungs (not by direct spread), or cerebrospinal fluid is classified as Stage IV."
     },
-    "Non-Hodgkin Lymphoma": {
-      "criteria": [
-        "Central nervous system (CNS) involvement (tumor in CNS or cranial nerve palsy, or blasts in CSF)",
-        "Bone marrow involvement (percentage of blasts/lymphoma cells in marrow)",
-        "Involvement of any tumor mass or lymph node region in the abdomen and whether it is extensive/unresectable",
-        "Presence of any primary intrathoracic tumor (mediastinal, hilar, pulmonary, pleural, thymic)",
-        "Presence of any paraspinal or epidural tumor",
-        "Involvement of gastrointestinal tract tumor and whether completely resectable",
-        "Number of lymph node regions involved above and below the diaphragm",
-        "Number of extranodal organs or sites involved above and below the diaphragm"
-      ],
-      "stages": {
-        "Stage I": "A single tumor (extranodal) or single anatomic lymph node area involved, with no disease in the abdomen or mediastinum.",
-        "Stage II": "Any of the following, limited to one side of the diaphragm: (1) A single extranodal tumor with regional lymph node involvement; (2) Two or more lymph node areas involved; (3) Two or more extranodal tumors (with or without regional node involvement); (4) A completely resected primary gastrointestinal tumor (with or without involvement of only local mesenteric nodes). All disease for Stage II is confined to either entirely above or entirely below the diaphragm.",
-        "Stage III": "Any of the following: (1) Tumors or lymph node areas on both sides of the diaphragm; (2) Any primary intrathoracic tumor (mediastinal, hilar, pulmonary, or pleural, including thymus); (3) Extensive, unresectable intra-abdominal disease*; or (4) Any paraspinal or epidural tumor (regardless of other sites).",
-        "Stage IV": "Involvement of the central nervous system (CNS) and/or bone marrow at diagnosis (initial CNS and/or bone marrow involvement)."
-      ],
-      "definitions": {
-        "CNS involvement": "Any CNS tumor mass on imaging, or cranial nerve palsy not from extradural disease, or the presence of lymphoma cells in the CSF. (If no CNS mass or palsy, a CSF report is needed to confirm or exclude CNS disease.)",
-        "Bone marrow involvement": "≥5% blasts or lymphoma cells in bone marrow aspirate or biopsy.",
-        "Extensive (unresectable) intra-abdominal disease": "Disease spread through the abdomen with implants on mesentery or peritoneum (e.g., para-aortic or retroperitoneal implants), or infiltration of structures adjacent to the primary tumor. Ascites may be present, and complete resection of all gross tumor is not possible."
-      }
+    "definitions": {
+      "Constitutional symptoms": "Referred to as B symptoms. Suffix 'A' (no constitutional symptoms) or 'B' (presence of constitutional symptoms) is added to the stage. Constitutional symptoms include: unexplained fever >38°C, drenching night sweats, and unexplained weight loss >10% of body weight in 6 months."
+    }
+  },
+  "Non-Hodgkin Lymphoma": {
+    "criteria": [
+      "Central nervous system (CNS) involvement (tumor in CNS or cranial nerve palsy, or blasts in CSF)",
+      "Bone marrow involvement (percentage of blasts/lymphoma cells in marrow)",
+      "Involvement of any tumor mass or lymph node region in the abdomen and whether it is extensive/unresectable",
+      "Presence of any primary intrathoracic tumor (mediastinal, hilar, pulmonary, pleural, thymic)",
+      "Presence of any paraspinal or epidural tumor",
+      "Involvement of gastrointestinal tract tumor and whether completely resectable",
+      "Number of lymph node regions involved above and below the diaphragm",
+      "Number of extranodal organs or sites involved above and below the diaphragm"
+    ],
+    "stages": {
+      "Stage I": "A single tumor (extranodal) or single anatomic lymph node area involved, with no disease in the abdomen or mediastinum.",
+      "Stage II": "Any of the following, limited to one side of the diaphragm: (1) A single extranodal tumor with regional lymph node involvement; (2) Two or more lymph node areas involved; (3) Two or more extranodal tumors (with or without regional node involvement); (4) A completely resected primary gastrointestinal tumor (with or without involvement of only local mesenteric nodes). All disease for Stage II is confined to either entirely above or entirely below the diaphragm.",
+      "Stage III": "Any of the following: (1) Tumors or lymph node areas on both sides of the diaphragm; (2) Any primary intrathoracic tumor (mediastinal, hilar, pulmonary, or pleural, including thymus); (3) Extensive, unresectable intra-abdominal disease*; or (4) Any paraspinal or epidural tumor (regardless of other sites).",
+      "Stage IV": "Involvement of the central nervous system (CNS) and/or bone marrow at diagnosis (initial CNS and/or bone marrow involvement)."
     },
-    "Neuroblastoma": {
-      "criteria": [
-        "Age of patient in days/months",
-        "Presence of distant metastatic disease",
-        "Specific metastatic sites involved (especially skin, liver, bone marrow)",
-        "Extent of loco-regional tumor spread",
-        "Number of image-defined risk factors (IDRFs) present (require imaging assessment)",
-        "MIBG scintigraphy results for bone/bone marrow involvement"
+    "definitions": {
+      "CNS involvement": "Any CNS tumor mass on imaging, or cranial nerve palsy not from extradural disease, or the presence of lymphoma cells in the CSF. (If no CNS mass or palsy, a CSF report is needed to confirm or exclude CNS disease.)",
+      "Bone marrow involvement": "≥5% blasts or lymphoma cells in bone marrow aspirate or biopsy.",
+      "Extensive (unresectable) intra-abdominal disease": "Disease spread through the abdomen with implants on mesentery or peritoneum (e.g., para-aortic or retroperitoneal implants), or infiltration of structures adjacent to the primary tumor. Ascites may be present, and complete resection of all gross tumor is not possible."
+    }
+  },
+  "Neuroblastoma": {
+    "criteria": [
+      "Age of patient in days/months",
+      "Presence of distant metastatic disease",
+      "Specific metastatic sites involved (especially skin, liver, bone marrow)",
+      "Extent of loco-regional tumor spread",
+      "Number of image-defined risk factors (IDRFs) present (require imaging assessment)",
+      "MIBG scintigraphy results for bone/bone marrow involvement"
+    ],
+    "stages": {
+      "L1": "Localized tumor confined to one body compartment (neck, chest, abdomen, or pelvis) and not involving vital structures as defined by the list of IDRFs (i.e. no IDRFs). Note: An intraspinal extension that does not meet IDRF criteria is still Stage L1.",
+      "L2": "Locoregional tumor with one or more IDRFs. The tumor may extend contiguously within the ipsilateral body compartments (e.g., abdominal tumor extending into adjacent ipsilateral thorax). However, if a tumor crosses to involve contralateral organ/sites (e.g., left abdominal primary with right-sided thoracic involvement), it is considered metastatic (Stage M).",
+      "M": "Distant metastatic disease (not contiguous with primary tumor) except as defined for Stage MS. Non-regional (distant) lymph node involvement is considered metastatic disease. (Note: Pleural effusion or ascites with malignant cells does not by itself constitute Stage M unless it is remote from the primary tumor's body compartment.)",
+      "MS": "Metastatic disease confined to skin, liver, and/or bone marrow in a child <18 months old (547 days), with no other metastatic sites. MIBG scintigraphy must be negative in bone and bone marrow for Stage MS."
+    },
+    "definitions": {
+      "Image-Defined Risk Factors (IDRFs)": [
+        "Tumor extension across two body compartments (neck-chest, chest-abdomen, or abdomen-pelvis).",
+        "Neck: Tumor encasing carotid and/or vertebral artery and/or internal jugular vein; Tumor extending to base of skull; Tumor compressing the trachea.",
+        "Cervico-thoracic junction: Tumor encasing brachial plexus roots; Tumor encasing subclavian vessels and/or vertebral/carotid artery; Tumor compressing the trachea.",
+        "Thorax: Tumor encasing the aorta and/or major branches; Tumor compressing the trachea and/or principal bronchi; Lower mediastinal tumor infiltrating the costo-vertebral junction (T9-T12).",
+        "Thoraco-abdominal: Tumor encasing the aorta and/or vena cava.",
+        "Abdomen/Pelvis: Tumor infiltrating the porta hepatis and/or hepatoduodenal ligament; Tumor encasing branches of the superior mesenteric artery at mesenteric root; Tumor encasing origin of celiac axis and/or superior mesenteric artery; Tumor invading one or both renal pedicles; Tumor encasing iliac vessels; Pelvic tumor crossing the sciatic notch; Tumor encasing aorta and/or vena cava.",
+        "Intraspinal extension: More than one-third of spinal canal in axial plane is invaded and/or the perimedullary leptomeningeal spaces are not visible and/or the spinal cord signal is abnormal.",
+        "Infiltration of adjacent organs/structures: Pericardium, diaphragm, kidney, liver, duodeno-pancreatic block, or mesentery."
       ],
-      "stages": {
-        "L1": "Localized tumor confined to one body compartment (neck, chest, abdomen, or pelvis) and not involving vital structures as defined by the list of IDRFs (i.e. no IDRFs). Note: An intraspinal extension that does not meet IDRF criteria is still Stage L1.",
-        "L2": "Locoregional tumor with one or more IDRFs. The tumor may extend contiguously within the ipsilateral body compartments (e.g., abdominal tumor extending into adjacent ipsilateral thorax). However, if a tumor crosses to involve contralateral organ/sites (e.g., left abdominal primary with right-sided thoracic involvement), it is considered metastatic (Stage M).",
-        "M": "Distant metastatic disease (not contiguous with primary tumor) except as defined for Stage MS. Non-regional (distant) lymph node involvement is considered metastatic disease. (Note: Pleural effusion or ascites with malignant cells does not by itself constitute Stage M unless it is remote from the primary tumor's body compartment.)",
-        "MS": "Metastatic disease confined to skin, liver, and/or bone marrow in a child <18 months old (547 days), with no other metastatic sites. MIBG scintigraphy must be negative in bone and bone marrow for Stage MS."
+      "Multifocal primary tumors": "If multiple primary neuroblastomas are present, staging is based on the tumor with the greatest extent of disease (as per the IDRF criteria)."
+    }
+  },
+  "Wilms Tumor (Renal Tumors)": {
+    "criteria": [
+      "Whether patient received pre-surgical chemotherapy (treatment protocol: COG vs SIOP)",
+      "Presence of distant metastases at diagnosis",
+      "Involvement of regional (abdominal) lymph nodes",
+      "Any biopsy of the tumor prior to resection (and type, depending on protocol)",
+      "Whether tumor was completely excised at surgery",
+      "Whether tumor was confined to the kidney or extended beyond"
+    ],
+    "stages": {
+      "Stage I": "Tumor limited to the kidney and completely resected. The renal capsule is intact (no tumor rupture), no invasion of renal sinus vessels, no residual tumor, no lymph node or distant metastasis, no preoperative tumor biopsy, and surgical margins are clear.",
+      "Stage II": "Tumor extends beyond the kidney but is completely resected. This includes tumor penetration of the renal capsule or involvement of the renal sinus (lymphatics or veins), or tumor invasion into the renal vein, but with negative margins. No lymph node or distant metastasis.",
+      "Stage III": "Residual non-hematogenous tumor is present in the abdomen after surgery, or tumor implants/spillage. This can include: involvement of abdominal (regional) lymph nodes; peritoneal contamination or tumor implants; any tumor spillage (before or during surgery); gross or microscopic residual tumor remaining post-surgery; tumor not completely resected due to biopsy prior to removal (including fine-needle aspiration); or tumor at surgical margins.",
+      "Stage IV": "Hematogenous metastases or distant metastasis present at diagnosis (e.g., lung, liver, bone, brain, or distant lymph nodes beyond the abdomen).",
+      "Stage y-I": "(Post-chemotherapy, SIOP protocol) Tumor limited to the kidney and completely resected after neoadjuvant chemotherapy. The tumor may have infiltrated the renal capsule but not beyond it. It may protrude into the renal pelvis or ureter but without infiltration. Renal sinus vessels are not involved.",
+      "Stage y-II": "(Post-chemotherapy) Tumor extends beyond the kidney but is completely resected. Tumor may penetrate the renal capsule into perirenal fat. It may infiltrate the renal sinus or invade blood/lymphatic vessels outside the renal parenchyma, or infiltrate adjacent organs or the vena cava, but is fully resected.",
+      "Stage y-III": "(Post-chemotherapy) Incomplete resection or microscopic residual tumor remains confined to the abdomen. Criteria include: involved abdominal lymph nodes (including those with necrosis or chemo-induced change); tumor rupture before or during surgery; tumor penetration of the peritoneal surface; tumor thrombus at resection margins; or a surgical (open) biopsy was performed before resection (excluding needle biopsy).",
+      "Stage V": "Bilateral renal tumors at diagnosis (synchronous involvement of both kidneys). Each side is staged separately per the above criteria, but for registry purposes, bilateral disease is noted and the more advanced stage of the two determines the overall stage."
+    },
+    "definitions": {
+      "Bilateral disease": "If both kidneys are involved (synchronous bilateral Wilms tumors), it should be recorded, but staging is determined by the kidney with more advanced disease.",
+      "Staging systems": "COG (National Wilms Tumor Study) staging applies to tumors without preoperative chemotherapy; SIOP (International Society of Paediatric Oncology) staging applies to tumors after preoperative chemotherapy. 'y-' prefix stages indicate SIOP (post-therapy) staging."
+    }
+  },
+  "Rhabdomyosarcoma": {
+    "criteria": [
+      "Presence of distant metastases at diagnosis",
+      "Regional lymph node involvement",
+      "Tumor size (greatest diameter)",
+      "Anatomic site of the primary tumor (categorized as favorable or unfavorable site)"
+    ],
+    "stages": {
+      "Stage I": "Localized disease in a favorable anatomic site, any tumor size (T1 or T2), any nodal status, no distant metastasis (M0).",
+      "Stage II": "Localized disease in an unfavorable site, tumor ≤5 cm (T1a or T2a), regional lymph nodes not involved (N0), and no distant metastasis.",
+      "Stage III": "Localized disease with either: (a) Unfavorable site, tumor ≤5 cm (T1a or T2a) with regional lymph node involvement (N1) and M0; OR (b) Unfavorable site, tumor >5 cm (T1b or T2b), any nodal status, M0.",
+      "Stage IV": "Metastatic disease present at diagnosis: any primary site, any tumor size (any T), any nodal status (any N), with distant metastases (M1)."
+    },
+    "definitions": {
+      "Favorable anatomic sites": [
+        "Orbit",
+        "Head and neck (non-parameningeal)",
+        "Scalp",
+        "Parotid gland",
+        "Oral cavity",
+        "Larynx",
+        "Oropharynx",
+        "Cheek",
+        "Hypopharynx",
+        "Thyroid",
+        "Parathyroid",
+        "Neck",
+        "Genitourinary (non-bladder, non-prostate, e.g., paratesticular, vagina, uterus)",
+        "Gallbladder and bile ducts"
+      ],
+      "Unfavorable anatomic sites": [
+        "Bladder",
+        "Prostate",
+        "Extremities (limbs)",
+        "Parameningeal (e.g., nasopharynx, nasal cavity, paranasal sinuses, middle ear, infratemporal fossa, pterygopalatine fossa, parapharyngeal area)",
+        "Middle ear",
+        "Nasal cavity",
+        "Paranasal sinuses (or tumor extending into sinuses)",
+        "Nasopharynx",
+        "Infratemporal fossa/Pterygopalatine fossa",
+        "Parapharyngeal space",
+        "Trunk",
+        "Retroperitoneum",
+        "Any other site not listed as favorable"
+      ],
+      "T (Tumor size)": {
+        "T0": "No evidence of primary tumor",
+        "T1": "Tumor confined to a single anatomic site or compartment",
+        "T1a": "Tumor ≤5 cm in greatest dimension",
+        "T1b": "Tumor >5 cm in greatest dimension",
+        "T2": "Tumor with extension beyond the primary anatomic site (into adjacent site/compartment)",
+        "T2a": "Tumor extension but ≤5 cm in greatest dimension",
+        "T2b": "Tumor extension >5 cm in greatest dimension",
+        "Tx": "Primary tumor cannot be assessed"
       },
-      "definitions": {
-        "Image-Defined Risk Factors (IDRFs)": [
-          "Tumor extension across two body compartments (neck-chest, chest-abdomen, or abdomen-pelvis).",
-          "Neck: Tumor encasing carotid and/or vertebral artery and/or internal jugular vein; Tumor extending to base of skull; Tumor compressing the trachea.",
-          "Cervico-thoracic junction: Tumor encasing brachial plexus roots; Tumor encasing subclavian vessels and/or vertebral/carotid artery; Tumor compressing the trachea.",
-          "Thorax: Tumor encasing the aorta and/or major branches; Tumor compressing the trachea and/or principal bronchi; Lower mediastinal tumor infiltrating the costo-vertebral junction (T9-T12).",
-          "Thoraco-abdominal: Tumor encasing the aorta and/or vena cava.",
-          "Abdomen/Pelvis: Tumor infiltrating the porta hepatis and/or hepatoduodenal ligament; Tumor encasing branches of the superior mesenteric artery at mesenteric root; Tumor encasing origin of celiac axis and/or superior mesenteric artery; Tumor invading one or both renal pedicles; Tumor encasing iliac vessels; Pelvic tumor crossing the sciatic notch; Tumor encasing aorta and/or vena cava.",
-          "Intraspinal extension: More than one-third of spinal canal in axial plane is invaded and/or the perimedullary leptomeningeal spaces are not visible and/or the spinal cord signal is abnormal.",
-          "Infiltration of adjacent organs/structures: Pericardium, diaphragm, kidney, liver, duodeno-pancreatic block, or mesentery."
-        ],
-        "Multifocal primary tumors": "If multiple primary neuroblastomas are present, staging is based on the tumor with the greatest extent of disease (as per the IDRF criteria)."
-      }
-    },
-    "Wilms Tumor (Renal Tumors)": {
-      "criteria": [
-        "Whether patient received pre-surgical chemotherapy (treatment protocol: COG vs SIOP)",
-        "Presence of distant metastases at diagnosis",
-        "Involvement of regional (abdominal) lymph nodes",
-        "Any biopsy of the tumor prior to resection (and type, depending on protocol)",
-        "Whether tumor was completely excised at surgery",
-        "Whether tumor was confined to the kidney or extended beyond"
-      ],
-      "stages": {
-        "Stage I": "Tumor limited to the kidney and completely resected. The renal capsule is intact (no tumor rupture), no invasion of renal sinus vessels, no residual tumor, no lymph node or distant metastasis, no preoperative tumor biopsy, and surgical margins are clear.",
-        "Stage II": "Tumor extends beyond the kidney but is completely resected. This includes tumor penetration of the renal capsule or involvement of the renal sinus (lymphatics or veins), or tumor invasion into the renal vein, but with negative margins. No lymph node or distant metastasis.",
-        "Stage III": "Residual non-hematogenous tumor is present in the abdomen after surgery, or tumor implants/spillage. This can include: involvement of abdominal (regional) lymph nodes; peritoneal contamination or tumor implants; any tumor spillage (before or during surgery); gross or microscopic residual tumor remaining post-surgery; tumor not completely resected due to biopsy prior to removal (including fine-needle aspiration); or tumor at surgical margins.",
-        "Stage IV": "Hematogenous metastases or distant metastasis present at diagnosis (e.g., lung, liver, bone, brain, or distant lymph nodes beyond the abdomen).",
-        "Stage y-I": "(Post-chemotherapy, SIOP protocol) Tumor limited to the kidney and completely resected after neoadjuvant chemotherapy. The tumor may have infiltrated the renal capsule but not beyond it. It may protrude into the renal pelvis or ureter but without infiltration. Renal sinus vessels are not involved.",
-        "Stage y-II": "(Post-chemotherapy) Tumor extends beyond the kidney but is completely resected. Tumor may penetrate the renal capsule into perirenal fat. It may infiltrate the renal sinus or invade blood/lymphatic vessels outside the renal parenchyma, or infiltrate adjacent organs or the vena cava, but is fully resected.",
-        "Stage y-III": "(Post-chemotherapy) Incomplete resection or microscopic residual tumor remains confined to the abdomen. Criteria include: involved abdominal lymph nodes (including those with necrosis or chemo-induced change); tumor rupture before or during surgery; tumor penetration of the peritoneal surface; tumor thrombus at resection margins; or a surgical (open) biopsy was performed before resection (excluding needle biopsy).",
-        "Stage V": "Bilateral renal tumors at diagnosis (synchronous involvement of both kidneys). Each side is staged separately per the above criteria, but for registry purposes, bilateral disease is noted and the more advanced stage of the two determines the overall stage."
+      "N (Regional lymph nodes)": {
+        "N0": "No regional lymph node involvement",
+        "N1": "Regional lymph node(s) involved",
+        "Nx": "Regional lymph nodes cannot be assessed"
       },
-      "definitions": {
-        "Bilateral disease": "If both kidneys are involved (synchronous bilateral Wilms tumors), it should be recorded, but staging is determined by the kidney with more advanced disease.",
-        "Staging systems": "COG (National Wilms Tumor Study) staging applies to tumors without preoperative chemotherapy; SIOP (International Society of Paediatric Oncology) staging applies to tumors after preoperative chemotherapy. 'y-' prefix stages indicate SIOP (post-therapy) staging."
-      }
-    },
-    "Rhabdomyosarcoma": {
-      "criteria": [
-        "Presence of distant metastases at diagnosis",
-        "Regional lymph node involvement",
-        "Tumor size (greatest diameter)",
-        "Anatomic site of the primary tumor (categorized as favorable or unfavorable site)"
-      ],
-      "stages": {
-        "Stage I": "Localized disease in a favorable anatomic site, any tumor size (T1 or T2), any nodal status, no distant metastasis (M0).",
-        "Stage II": "Localized disease in an unfavorable site, tumor ≤5 cm (T1a or T2a), regional lymph nodes not involved (N0), and no distant metastasis.",
-        "Stage III": "Localized disease with either: (a) Unfavorable site, tumor ≤5 cm (T1a or T2a) with regional lymph node involvement (N1) and M0; OR (b) Unfavorable site, tumor >5 cm (T1b or T2b), any nodal status, M0.",
-        "Stage IV": "Metastatic disease present at diagnosis: any primary site, any tumor size (any T), any nodal status (any N), with distant metastases (M1)."
-      ],
-      "definitions": {
-        "Favorable anatomic sites": [
-          "Orbit",
-          "Head and neck (non-parameningeal)",
-          "Scalp",
-          "Parotid gland",
-          "Oral cavity",
-          "Larynx",
-          "Oropharynx",
-          "Cheek",
-          "Hypopharynx",
-          "Thyroid",
-          "Parathyroid",
-          "Neck",
-          "Genitourinary (non-bladder, non-prostate, e.g., paratesticular, vagina, uterus)",
-          "Gallbladder and bile ducts"
-        ],
-        "Unfavorable anatomic sites": [
-          "Bladder",
-          "Prostate",
-          "Extremities (limbs)",
-          "Parameningeal (e.g., nasopharynx, nasal cavity, paranasal sinuses, middle ear, infratemporal fossa, pterygopalatine fossa, parapharyngeal area)",
-          "Middle ear",
-          "Nasal cavity",
-          "Paranasal sinuses (or tumor extending into sinuses)",
-          "Nasopharynx",
-          "Infratemporal fossa/Pterygopalatine fossa",
-          "Parapharyngeal space",
-          "Trunk",
-          "Retroperitoneum",
-          "Any other site not listed as favorable"
-        ],
-        "T (Tumor size)": {
-          "T0": "No evidence of primary tumor",
-          "T1": "Tumor confined to a single anatomic site or compartment",
-          "T1a": "Tumor ≤5 cm in greatest dimension",
-          "T1b": "Tumor >5 cm in greatest dimension",
-          "T2": "Tumor with extension beyond the primary anatomic site (into adjacent site/compartment)",
-          "T2a": "Tumor extension but ≤5 cm in greatest dimension",
-          "T2b": "Tumor extension >5 cm in greatest dimension",
-          "Tx": "Primary tumor cannot be assessed"
-        },
-        "N (Regional lymph nodes)": {
-          "N0": "No regional lymph node involvement",
-          "N1": "Regional lymph node(s) involved",
-          "Nx": "Regional lymph nodes cannot be assessed"
-        },
-        "M (Metastasis)": {
-          "M0": "No distant metastasis",
-          "M1": "Distant metastasis present"
-        }
-      }
-    },
-    "Non-Rhabdo Soft Tissue Sarcoma": {
-      "criteria": [
-        "Primary tumor size (maximum dimension)",
-        "Regional lymph node involvement",
-        "Presence of distant metastases",
-        "Tumor grade (degree of differentiation)"
-      ],
-      "stages": {
-        "Stage I": "Low-grade localized tumor: Any T, N0, M0, Grade 1 (G1) or grade indeterminate (Gx).",
-        "Stage II": "Localized tumor > Grade 1 but small: T1 (≤5 cm), N0, M0, Grade 2 or 3 (intermediate or high grade).",
-        "Stage III": "Localized tumor that is either: (a) Larger tumor (T2 >5≤10 cm, T3 >10≤15 cm, or T4 >15 cm), N0, M0, Grade 2 or 3; OR (b) Any tumor with regional lymph node involvement (any T, N1, M0, any grade).",
-        "Stage IV": "Distant metastatic disease: Any T, any N, M1, any grade."
-      ],
-      "definitions": {
-        "T (Tumor size)": {
-          "T0": "No evidence of primary tumor",
-          "T1": "Tumor ≤5 cm in greatest dimension",
-          "T2": "Tumor >5 cm and ≤10 cm",
-          "T3": "Tumor >10 cm and ≤15 cm",
-          "T4": "Tumor >15 cm in greatest dimension",
-          "Tx": "Primary tumor cannot be assessed"
-        },
-        "N (Regional lymph nodes)": {
-          "N0": "No regional lymph node involvement",
-          "N1": "Regional lymph node(s) involved",
-          "Nx": "Regional lymph nodes cannot be assessed"
-        },
-        "M (Metastasis)": {
-          "M0": "No distant metastasis",
-          "M1": "Distant metastasis present"
-        },
-        "G (Grade)": {
-          "G1": "Grade 1 (low grade, well-differentiated)",
-          "G2": "Grade 2 (intermediate, moderately differentiated)",
-          "G3": "Grade 3 (high grade, poorly or undifferentiated)",
-          "Gx": "Grade cannot be assessed"
-        }
-      }
-    },
-    "Bone Tumors": {
-      "criteria": [
-        "Presence of distant metastases"
-      ],
-      "stages": {
-        "Localized": "Tumor is confined to the primary site (including any regional lymph node involvement); no distant metastasis.",
-        "Metastatic": "Distant metastases are present at diagnosis."
-      },
-      "definitions": {
-        "Skip lesions": "Intramedullary 'skip' metastases in the same bone as the primary tumor are considered part of localized disease (not distant). If similar lesions are present in a different bone from the primary, they are considered distant metastases."
-      }
-    },
-    "Retinoblastoma": {
-      "criteria": [
-        "Presence of distant metastases",
-        "Involvement of the orbit (extraocular extension)",
-        "Regional lymph node involvement (preauricular or cervical nodes)",
-        "Whether enucleation (surgical removal of eye) has been performed",
-        "Residual tumor at surgical margin of enucleation"
-      ],
-      "stages": {
-        "Stage 0": "Intraocular disease only. Tumor is confined to the eye (globe) and no enucleation has been done (eye preserved, treated with focal therapies and/or chemotherapy).",
-        "Stage I": "Eye enucleated (surgically removed) with histologically confirmed complete resection and negative margins (no residual tumor).",
-        "Stage II": "Eye enucleated, but microscopic tumor remains at the resection margin (histologic residual disease at margin).",
-        "Stage III": "Regional extension: tumor extends beyond the eye to adjacent structures. This includes orbital extension (tumor spread into the orbit outside the globe) and/or regional lymph node involvement (tumor spread to preauricular or cervical lymph nodes).",
-        "Stage IV": "Metastatic disease: distant metastasis beyond the orbit and regional nodes. (This typically refers to hematogenous metastases such as to bone, bone marrow, or CNS.)"
-      },
-      "definitions": {
-        "Bilateral disease": "If both eyes are affected, note the presence of bilateral tumors, but stage is assigned based on the more advanced eye.",
-        "IRSS": "The staging outlined corresponds to the International Retinoblastoma Staging System (IRSS), which is a pathological staging determined after enucleation and evaluation of extent."
-      }
-    },
-    "Hepatoblastoma": {
-      "criteria": [
-        "Presence of distant metastases at diagnosis",
-        "Extent of tumor involvement in liver segments (imaging-determined, PRETEXT grouping)"
-      ],
-      "stages": {
-        "Localized": "No distant metastases (confined to the liver, regardless of extent within the liver).",
-        "Metastatic": "Distant metastases present at diagnosis (tumor spread outside the liver)."
-      },
-      "definitions": {
-        "PRETEXT": "PRETEXT (PRE-Treatment EXTent of tumor) number describes how many of the four liver sections contain tumor before any therapy. It is assigned by imaging:",
-        "PRETEXT I": "One liver section involved by tumor, the other three adjoining sections are free of tumor.",
-        "PRETEXT II": "One or two liver sections are involved by tumor, with at least two adjoining sections free of tumor. (Tumors isolated to the caudate lobe are considered PRETEXT II as well.)",
-        "PRETEXT III": "Two or three liver sections involved by tumor, and no two adjoining liver sections are free (only one section remains uninvolved).",
-        "PRETEXT IV": "All four liver sections are involved by tumor. (No uninvolved sections remain.)",
-        "Liver segmentation": "For defining PRETEXT, the liver is divided into four sections: left lateral (segments II & III), left medial (segment IV ± caudate), right anterior (segments V & VIII), and right posterior (segments VI & VII)."
-      }
-    },
-    "Testicular Germ Cell Tumor": {
-      "criteria": [
-        "Presence of distant metastases",
-        "Regional lymph node involvement (typically retroperitoneal nodes)",
-        "Size of regional lymph node mass",
-        "Extent of primary testicular tumor (pathologic T stage after orchiectomy)",
-        "Serum tumor marker levels (LDH, β-hCG, AFP) post-orchiectomy"
-      ],
-      "stages": {
-        "Stage I": "Tumor confined to the testis (pT1-4), no regional lymph node metastasis (N0), no distant metastasis (M0), and marker status undetermined or normal (SX). This encompasses all Stage I subclasses (IA, IB, IS).",
-        "Stage IA": "Tumor limited to testis/epididymis without lymphovascular invasion (pT1), N0, M0, and serum markers within normal limits (S0).",
-        "Stage IB": "Tumor with any of: lymphovascular invasion or extension to tunica vaginalis or spermatic cord or scrotum (pT2, pT3, or pT4), N0, M0, and normal serum markers (S0).",
-        "Stage IS": "No nodal or distant metastasis (N0, M0) but with persistently elevated serum tumor markers (S1-3) after orchiectomy (any pT).",
-        "Stage II": "Regional lymph node metastasis present (N1-3), no distant metastasis, any pT, marker status may be unknown (SX). Subdivided by extent of nodal involvement.",
-        "Stage IIA": "Metastasis in regional lymph nodes, mass ≤2 cm and ≤5 nodes involved (N1), M0, and serum markers either normal or mildly elevated (S0 or S1).",
-        "Stage IIB": "Metastasis in regional lymph nodes, mass >2 cm but ≤5 cm, or multiple nodes with any one mass ≤5 cm (N2), M0, and S0 or S1 markers.",
-        "Stage IIC": "Metastasis in regional lymph nodes with a mass >5 cm (N3), M0, and S0 or S1 markers.",
-        "Stage III": "Distant metastasis present (M1) OR more significant elevation of markers. Includes any pT, any N, M1, or certain marker criteria without M1. Subdivided by marker levels and metastatic extent.",
-        "Stage IIIA": "Distant metastasis to non-visceral sites (typically lung) with normal or mildly elevated markers (M1, S0 or S1), or regional nodal disease with moderately elevated markers (N1-3, M0, S2).",
-        "Stage IIIB": "Either regional nodal metastasis with significantly elevated markers (N1-3, M0, S2) OR distant metastasis (M1) with moderately elevated markers (S2).",
-        "Stage IIIC": "Either regional nodal metastasis with very high markers (N1-3, M0, S3) OR distant metastasis (M1) with highly elevated markers (S3)."
-      ],
-      "definitions": {
-        "Serum tumor markers (S levels)": "Post-orchiectomy serum levels of LDH, hCG, and AFP define S0-S3 categories: S0 = normal LDH, hCG <5 mIU/mL, AFP <40 ng/mL; S1 = LDH <1.5× normal OR hCG 5–5000 mIU/mL OR AFP 40–1000 ng/mL; S2 = LDH 1.5–10× normal OR hCG 5000–50,000 mIU/mL OR AFP 1000–10,000 ng/mL; S3 = LDH >10× normal OR hCG >50,000 mIU/mL OR AFP >10,000 ng/mL.",
-        "pT (primary tumor) stages": {
-          "pT1": "Tumor limited to testis/epididymis without vascular/lymphatic invasion; tumor may invade tunica albuginea but not tunica vaginalis.",
-          "pT2": "Tumor limited to testis/epididymis with vascular/lymphatic invasion, or tumor extending through tunica albuginea with tunica vaginalis involvement.",
-          "pT3": "Tumor invades the spermatic cord with or without vascular/lymphatic invasion.",
-          "pT4": "Tumor invades the scrotum with or without vascular/lymphatic invasion.",
-          "pTx": "Primary tumor cannot be assessed (e.g., if radical orchiectomy has not been performed)."
-        },
-        "Regional lymph nodes": "For testicular cancer, regional lymph nodes are primarily the retroperitoneal nodes (interaortocaval, para-aortic, paracaval, preaortic, precaval, retroaortic, retrocaval, and those along the spermatic cord)."
-      }
-    },
-    "Ovarian Germ Cell Tumor": {
-      "criteria": [
-        "Presence of distant metastases",
-        "Involvement of retroperitoneal (regional) lymph nodes",
-        "Extent of tumor spread within the pelvis or peritoneal cavity (confirmed by cytology or histology)"
-      ],
-      "stages": {
-        "Stage I": "Tumor confined to the ovary or ovaries (one or both), with no spread beyond the ovaries.",
-        "Stage II": "Tumor involves one or both ovaries with extension to pelvic organs/structures (pelvic extension below the pelvic brim) or implants confined to the pelvis.",
-        "Stage III": "Tumor involves one or both ovaries with confirmed spread outside the pelvis to the abdominal peritoneum and/or metastasis to retroperitoneal lymph nodes.",
-        "Stage IV": "Distant metastasis present. Tumor spread to distant organs (e.g., lung, liver, etc.), excluding peritoneal metastases which are part of Stage III."
-      },
-      "definitions": {
-        "FIGO staging": "The staging corresponds to FIGO (International Federation of Gynecology and Obstetrics) staging for ovarian cancer. For germ cell tumors in childhood, detailed sub-stages (IA, IB, etc.) are not separately distinguished here, but overall stages I–IV follow FIGO criteria.",
-        "Regional lymph nodes": "Regional lymph nodes for ovarian tumors are the retroperitoneal nodes (pelvic and para-aortic lymph nodes).",
-        "Pelvic extension": "Spread of tumor to pelvic organs (uterus, fallopian tubes, bladder, rectum) or within the pelvic peritoneum (below the pelvic brim) without reaching the upper abdomen."
-      }
-    },
-    "Astrocytoma": {
-      "criteria": [
-        "Presence of distant metastases (e.g., via CSF or outside CNS)"
-      ],
-      "stages": {
-        "Localized": "Tumor is localized to its site of origin in the CNS with no evidence of dissemination.",
-        "Metastatic": "Tumor has disseminated beyond the primary site (within CNS via cerebrospinal fluid spread, or outside the CNS)."
-      },
-      "definitions": {
-        "Included tumors": "Both low-grade (non-malignant) and high-grade astrocytic tumors are included in this staging. Even histologically benign astrocytomas can be staged as metastatic if they have disseminated."
-      }
-    },
-    "Medulloblastoma (CNS Embryonal Tumors)": {
-      "criteria": [
-        "Presence of distant metastases",
-        "Metastatic sites on neuroimaging (brain and spine MRI)",
-        "Tumor cells in the cerebrospinal fluid (CSF cytology)"
-      ],
-      "stages": {
-        "M0": "No metastasis: No visible metastatic disease on MRI of brain and spine, and CSF cytology has no tumor cells.",
-        "M1": "Tumor cells present in CSF (positive CSF cytology) but no visible metastatic lesions on imaging.",
-        "M2": "Visible metastatic tumor in the brain (intracranial metastasis) beyond the primary tumor site.",
-        "M3": "Visible metastatic tumor in the spine (spinal metastasis) and/or at the intracranial spinal junction (cervicomedullary junction).",
-        "M4": "Metastasis outside the central nervous system (e.g., distant systemic metastases to bone, bone marrow, etc.)."
-      ],
-      "definitions": {
-        "M staging system": "The M0–M4 staging is used for medulloblastoma and other embryonal CNS tumors, indicating the extent of leptomeningeal spread: M0 (no dissemination) through M4 (extracranial metastasis). Non-malignant embryonal tumors (if any) are staged similarly if they show dissemination."
-      }
-    },
-    "Ependymoma": {
-      "criteria": [
-        "Presence of distant metastases",
-        "Metastatic sites on neuroimaging (brain and spine MRI)",
-        "Tumor cells in the cerebrospinal fluid"
-      ],
-      "stages": {
-        "M0": "No metastasis: No evidence of tumor spread on MRI of brain and spine, and no tumor cells in CSF.",
-        "M1": "Tumor cells detected in CSF (positive lumbar CSF cytology) with no visible metastases on imaging.",
-        "M2": "Visible metastasis in the brain away from the primary ependymoma site.",
-        "M3": "Visible metastasis in the spinal cord (drop metastases in spine) and/or at the cervicomedullary junction.",
-        "M4": "Metastasis outside the CNS (spread to distant sites beyond the brain and spinal cord)."
-      },
-      "definitions": {
-        "M staging system": "Same M0–M4 classification as medulloblastoma is applied to ependymomas to denote extent of CSF dissemination. Even low-grade ependymomas are staged if they disseminate via CSF.",
-        "Included tumors": "Both benign and malignant ependymal tumors are included in this staging scheme if they exhibit spread."
+      "M (Metastasis)": {
+        "M0": "No distant metastasis",
+        "M1": "Distant metastasis present"
       }
     }
+  },
+  "Non-Rhabdo Soft Tissue Sarcoma": {
+    "criteria": [
+      "Primary tumor size (maximum dimension)",
+      "Regional lymph node involvement",
+      "Presence of distant metastases",
+      "Tumor grade (degree of differentiation)"
+    ],
+    "stages": {
+      "Stage I": "Low-grade localized tumor: Any T, N0, M0, Grade 1 (G1) or grade indeterminate (Gx).",
+      "Stage II": "Localized tumor > Grade 1 but small: T1 (≤5 cm), N0, M0, Grade 2 or 3 (intermediate or high grade).",
+      "Stage III": "Localized tumor that is either: (a) Larger tumor (T2 >5≤10 cm, T3 >10≤15 cm, or T4 >15 cm), N0, M0, Grade 2 or 3; OR (b) Any tumor with regional lymph node involvement (any T, N1, M0, any grade).",
+      "Stage IV": "Distant metastatic disease: Any T, any N, M1, any grade."
+    },
+    "definitions": {
+      "T (Tumor size)": {
+        "T0": "No evidence of primary tumor",
+        "T1": "Tumor ≤5 cm in greatest dimension",
+        "T2": "Tumor >5 cm and ≤10 cm",
+        "T3": "Tumor >10 cm and ≤15 cm",
+        "T4": "Tumor >15 cm in greatest dimension",
+        "Tx": "Primary tumor cannot be assessed"
+      },
+      "N (Regional lymph nodes)": {
+        "N0": "No regional lymph node involvement",
+        "N1": "Regional lymph node(s) involved",
+        "Nx": "Regional lymph nodes cannot be assessed"
+      },
+      "M (Metastasis)": {
+        "M0": "No distant metastasis",
+        "M1": "Distant metastasis present"
+      },
+      "G (Grade)": {
+        "G1": "Grade 1 (low grade, well-differentiated)",
+        "G2": "Grade 2 (intermediate, moderately differentiated)",
+        "G3": "Grade 3 (high grade, poorly or undifferentiated)",
+        "Gx": "Grade cannot be assessed"
+      }
+    }
+  },
+  "Bone Tumors": {
+    "criteria": [
+      "Presence of distant metastases"
+    ],
+    "stages": {
+      "Localized": "Tumor is confined to the primary site (including any regional lymph node involvement); no distant metastasis.",
+      "Metastatic": "Distant metastases are present at diagnosis."
+    },
+    "definitions": {
+      "Skip lesions": "Intramedullary 'skip' metastases in the same bone as the primary tumor are considered part of localized disease (not distant). If similar lesions are present in a different bone from the primary, they are considered distant metastases."
+    }
+  },
+  "Retinoblastoma": {
+    "criteria": [
+      "Presence of distant metastases",
+      "Involvement of the orbit (extraocular extension)",
+      "Regional lymph node involvement (preauricular or cervical nodes)",
+      "Whether enucleation (surgical removal of eye) has been performed",
+      "Residual tumor at surgical margin of enucleation"
+    ],
+    "stages": {
+      "Stage 0": "Intraocular disease only. Tumor is confined to the eye (globe) and no enucleation has been done (eye preserved, treated with focal therapies and/or chemotherapy).",
+      "Stage I": "Eye enucleated (surgically removed) with histologically confirmed complete resection and negative margins (no residual tumor).",
+      "Stage II": "Eye enucleated, but microscopic tumor remains at the resection margin (histologic residual disease at margin).",
+      "Stage III": "Regional extension: tumor extends beyond the eye to adjacent structures. This includes orbital extension (tumor spread into the orbit outside the globe) and/or regional lymph node involvement (tumor spread to preauricular or cervical lymph nodes).",
+      "Stage IV": "Metastatic disease: distant metastasis beyond the orbit and regional nodes. (This typically refers to hematogenous metastases such as to bone, bone marrow, or CNS.)"
+    },
+    "definitions": {
+      "Bilateral disease": "If both eyes are affected, note the presence of bilateral tumors, but stage is assigned based on the more advanced eye.",
+      "IRSS": "The staging outlined corresponds to the International Retinoblastoma Staging System (IRSS), which is a pathological staging determined after enucleation and evaluation of extent."
+    }
+  },
+  "Hepatoblastoma": {
+    "criteria": [
+      "Presence of distant metastases at diagnosis",
+      "Extent of tumor involvement in liver segments (imaging-determined, PRETEXT grouping)"
+    ],
+    "stages": {
+      "Localized": "No distant metastases (confined to the liver, regardless of extent within the liver).",
+      "Metastatic": "Distant metastases present at diagnosis (tumor spread outside the liver)."
+    },
+    "definitions": {
+      "PRETEXT": "PRETEXT (PRE-Treatment EXTent of tumor) number describes how many of the four liver sections contain tumor before any therapy. It is assigned by imaging:",
+      "PRETEXT I": "One liver section involved by tumor, the other three adjoining sections are free of tumor.",
+      "PRETEXT II": "One or two liver sections are involved by tumor, with at least two adjoining sections free of tumor. (Tumors isolated to the caudate lobe are considered PRETEXT II as well.)",
+      "PRETEXT III": "Two or three liver sections involved by tumor, and no two adjoining liver sections are free (only one section remains uninvolved).",
+      "PRETEXT IV": "All four liver sections are involved by tumor. (No uninvolved sections remain.)",
+      "Liver segmentation": "For defining PRETEXT, the liver is divided into four sections: left lateral (segments II & III), left medial (segment IV ± caudate), right anterior (segments V & VIII), and right posterior (segments VI & VII)."
+    }
+  },
+  "Testicular Germ Cell Tumor": {
+    "criteria": [
+      "Presence of distant metastases",
+      "Regional lymph node involvement (typically retroperitoneal nodes)",
+      "Size of regional lymph node mass",
+      "Extent of primary testicular tumor (pathologic T stage after orchiectomy)",
+      "Serum tumor marker levels (LDH, β-hCG, AFP) post-orchiectomy"
+    ],
+    "stages": {
+      "Stage I": "Tumor confined to the testis (pT1-4), no regional lymph node metastasis (N0), no distant metastasis (M0), and marker status undetermined or normal (SX). This encompasses all Stage I subclasses (IA, IB, IS).",
+      "Stage IA": "Tumor limited to testis/epididymis without lymphovascular invasion (pT1), N0, M0, and serum markers within normal limits (S0).",
+      "Stage IB": "Tumor with any of: lymphovascular invasion or extension to tunica vaginalis or spermatic cord or scrotum (pT2, pT3, or pT4), N0, M0, and normal serum markers (S0).",
+      "Stage IS": "No nodal or distant metastasis (N0, M0) but with persistently elevated serum tumor markers (S1-3) after orchiectomy (any pT).",
+      "Stage II": "Regional lymph node metastasis present (N1-3), no distant metastasis, any pT, marker status may be unknown (SX). Subdivided by extent of nodal involvement.",
+      "Stage IIA": "Metastasis in regional lymph nodes, mass ≤2 cm and ≤5 nodes involved (N1), M0, and serum markers either normal or mildly elevated (S0 or S1).",
+      "Stage IIB": "Metastasis in regional lymph nodes, mass >2 cm but ≤5 cm, or multiple nodes with any one mass ≤5 cm (N2), M0, and S0 or S1 markers.",
+      "Stage IIC": "Metastasis in regional lymph nodes with a mass >5 cm (N3), M0, and S0 or S1 markers.",
+      "Stage III": "Distant metastasis present (M1) OR more significant elevation of markers. Includes any pT, any N, M1, or certain marker criteria without M1. Subdivided by marker levels and metastatic extent.",
+      "Stage IIIA": "Distant metastasis to non-visceral sites (typically lung) with normal or mildly elevated markers (M1, S0 or S1), or regional nodal disease with moderately elevated markers (N1-3, M0, S2).",
+      "Stage IIIB": "Either regional nodal metastasis with significantly elevated markers (N1-3, M0, S2) OR distant metastasis (M1) with moderately elevated markers (S2).",
+      "Stage IIIC": "Either regional nodal metastasis with very high markers (N1-3, M0, S3) OR distant metastasis (M1) with highly elevated markers (S3)."
+    },
+    "definitions": {
+      "Serum tumor markers (S levels)": "Post-orchiectomy serum levels of LDH, hCG, and AFP define S0-S3 categories: S0 = normal LDH, hCG <5 mIU/mL, AFP <40 ng/mL; S1 = LDH <1.5× normal OR hCG 5–5000 mIU/mL OR AFP 40–1000 ng/mL; S2 = LDH 1.5–10× normal OR hCG 5000–50,000 mIU/mL OR AFP 1000–10,000 ng/mL; S3 = LDH >10× normal OR hCG >50,000 mIU/mL OR AFP >10,000 ng/mL.",
+      "pT (primary tumor) stages": {
+        "pT1": "Tumor limited to testis/epididymis without vascular/lymphatic invasion; tumor may invade tunica albuginea but not tunica vaginalis.",
+        "pT2": "Tumor limited to testis/epididymis with vascular/lymphatic invasion, or tumor extending through tunica albuginea with tunica vaginalis involvement.",
+        "pT3": "Tumor invades the spermatic cord with or without vascular/lymphatic invasion.",
+        "pT4": "Tumor invades the scrotum with or without vascular/lymphatic invasion.",
+        "pTx": "Primary tumor cannot be assessed (e.g., if radical orchiectomy has not been performed)."
+      },
+      "Regional lymph nodes": "For testicular cancer, regional lymph nodes are primarily the retroperitoneal nodes (interaortocaval, para-aortic, paracaval, preaortic, precaval, retroaortic, retrocaval, and those along the spermatic cord)."
+    }
+  },
+  "Ovarian Germ Cell Tumor": {
+    "criteria": [
+      "Presence of distant metastases",
+      "Involvement of retroperitoneal (regional) lymph nodes",
+      "Extent of tumor spread within the pelvis or peritoneal cavity (confirmed by cytology or histology)"
+    ],
+    "stages": {
+      "Stage I": "Tumor confined to the ovary or ovaries (one or both), with no spread beyond the ovaries.",
+      "Stage II": "Tumor involves one or both ovaries with extension to pelvic organs/structures (pelvic extension below the pelvic brim) or implants confined to the pelvis.",
+      "Stage III": "Tumor involves one or both ovaries with confirmed spread outside the pelvis to the abdominal peritoneum and/or metastasis to retroperitoneal lymph nodes.",
+      "Stage IV": "Distant metastasis present. Tumor spread to distant organs (e.g., lung, liver, etc.), excluding peritoneal metastases which are part of Stage III."
+    },
+    "definitions": {
+      "FIGO staging": "The staging corresponds to FIGO (International Federation of Gynecology and Obstetrics) staging for ovarian cancer. For germ cell tumors in childhood, detailed sub-stages (IA, IB, etc.) are not separately distinguished here, but overall stages I–IV follow FIGO criteria.",
+      "Regional lymph nodes": "Regional lymph nodes for ovarian tumors are the retroperitoneal nodes (pelvic and para-aortic lymph nodes).",
+      "Pelvic extension": "Spread of tumor to pelvic organs (uterus, fallopian tubes, bladder, rectum) or within the pelvic peritoneum (below the pelvic brim) without reaching the upper abdomen."
+    }
+  },
+  "Astrocytoma": {
+    "criteria": [
+      "Presence of distant metastases (e.g., via CSF or outside CNS)"
+    ],
+    "stages": {
+      "Localized": "Tumor is localized to its site of origin in the CNS with no evidence of dissemination.",
+      "Metastatic": "Tumor has disseminated beyond the primary site (within CNS via cerebrospinal fluid spread, or outside the CNS)."
+    },
+    "definitions": {
+      "Included tumors": "Both low-grade (non-malignant) and high-grade astrocytic tumors are included in this staging. Even histologically benign astrocytomas can be staged as metastatic if they have disseminated."
+    }
+  },
+  "Medulloblastoma (CNS Embryonal Tumors)": {
+    "criteria": [
+      "Presence of distant metastases",
+      "Metastatic sites on neuroimaging (brain and spine MRI)",
+      "Tumor cells in the cerebrospinal fluid (CSF cytology)"
+    ],
+    "stages": {
+      "M0": "No metastasis: No visible metastatic disease on MRI of brain and spine, and CSF cytology has no tumor cells.",
+      "M1": "Tumor cells present in CSF (positive CSF cytology) but no visible metastatic lesions on imaging.",
+      "M2": "Visible metastatic tumor in the brain (intracranial metastasis) beyond the primary tumor site.",
+      "M3": "Visible metastatic tumor in the spine (spinal metastasis) and/or at the intracranial spinal junction (cervicomedullary junction).",
+      "M4": "Metastasis outside the central nervous system (e.g., distant systemic metastases to bone, bone marrow, etc.)."
+    },
+    "definitions": {
+      "M staging system": "The M0–M4 staging is used for medulloblastoma and other embryonal CNS tumors, indicating the extent of leptomeningeal spread: M0 (no dissemination) through M4 (extracranial metastasis). Non-malignant embryonal tumors (if any) are staged similarly if they show dissemination."
+    }
+  },
+  "Ependymoma": {
+    "criteria": [
+      "Presence of distant metastases",
+      "Metastatic sites on neuroimaging (brain and spine MRI)",
+      "Tumor cells in the cerebrospinal fluid"
+    ],
+    "stages": {
+      "M0": "No metastasis: No evidence of tumor spread on MRI of brain and spine, and no tumor cells in CSF.",
+      "M1": "Tumor cells detected in CSF (positive lumbar CSF cytology) with no visible metastases on imaging.",
+      "M2": "Visible metastasis in the brain away from the primary ependymoma site.",
+      "M3": "Visible metastasis in the spinal cord (drop metastases in spine) and/or at the cervicomedullary junction.",
+      "M4": "Metastasis outside the CNS (spread to distant sites beyond the brain and spinal cord)."
+    },
+    "definitions": {
+      "M staging system": "Same M0–M4 classification as medulloblastoma is applied to ependymomas to denote extent of CSF dissemination. Even low-grade ependymomas are staged if they disseminate via CSF.",
+      "Included tumors": "Both benign and malignant ependymal tumors are included in this staging scheme if they exhibit spread."
+    }
   }
-  
+} 
