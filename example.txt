@@ -1,0 +1,146 @@
+### 1. Multidisciplinary Conference (MDC) Note
+
+**Patient:**  
+- Name: [Patient Name]  
+- Age: 4 years  
+- Gender: Female (example)  
+- Medical Record Number: 123456
+
+**Date:** [Insert Date]
+
+**Attendees:**  
+- Pediatric Oncologist  
+- Pediatric Surgeon  
+- Radiologist  
+- Pathologist  
+- Nursing Coordinator  
+- Social Worker
+
+**Clinical Summary:**  
+- The patient presented with a palpable left abdominal mass. Initial workup including imaging and a core needle biopsy is highly suggestive of Wilms tumor (nephroblastoma).  
+- There is no radiologic evidence of renal vein invasion or metastatic disease.
+
+**Radiology Summary:**  
+- Imaging reveals a solitary, heterogeneous mass in the left kidney with no vascular invasion. (See attached radiology report.)
+
+**Pathology Summary:**  
+- Biopsy findings show a classic triphasic pattern with blastemal, stromal, and epithelial components. There is no evidence of anaplasia. Immunohistochemistry is positive for WT1. (See attached pathology report.)
+
+**Discussion Points:**  
+- Confirmation of diagnosis of favorable histology Wilms tumor.  
+- Review of tumor staging based on radiologic findings.  
+- Discussion of the risks/benefits of initiating preoperative chemotherapy versus upfront surgery.
+
+**Plan:**  
+- Initiate preoperative chemotherapy with vincristine and dactinomycin (regimen adjusted per institutional protocol).  
+- Reassess tumor size and resectability after 6–8 weeks of chemotherapy.  
+- Schedule follow-up MDC meeting after the first cycle of chemotherapy to review response.  
+- Provide supportive care including nutritional and psychosocial support.
+
+**Action Items:**  
+- Pediatric Oncology to begin chemotherapy regimen.  
+- Radiology to plan interval imaging in 6–8 weeks.  
+- Surgical consult to review operability post-chemotherapy.  
+- Nursing and social work to coordinate family support and care logistics.
+
+---
+
+### 2. Radiology Report
+
+**Patient:** [Patient Name], 4 years old  
+**Exam:** Contrast-enhanced CT Abdomen and Pelvis  
+**Indication:** Evaluation of left abdominal mass; suspected Wilms tumor.
+
+**Findings:**  
+- **Left Kidney:** There is a solitary, well-circumscribed, heterogeneous mass measuring approximately 7.0 x 6.0 x 6.0 cm. The lesion demonstrates mixed attenuation with areas of necrosis.  
+- **Vascular Structures:** No evidence of extension into the renal vein or inferior vena cava.  
+- **Lymph Nodes:** No significant regional lymphadenopathy identified.  
+- **Contralateral Kidney & Other Organs:** The right kidney appears normal. No lesions identified in the liver or other abdominal organs.
+
+**Impression:**  
+- The imaging findings are consistent with a diagnosis of Wilms tumor. The absence of vascular invasion or distant metastases supports a localized process. Preoperative chemotherapy is recommended per multidisciplinary consensus.
+
+---
+
+### 3. Pathology Report
+
+**Patient:** [Patient Name], 4 years old  
+**Specimen:** Ultrasound-guided core needle biopsy of left renal mass  
+**Clinical History:** Radiologic findings consistent with Wilms tumor.
+
+**Gross Description:**  
+- Multiple core tissue fragments, ranging in aggregate size from 0.3 to 0.7 cm.
+
+**Microscopic Description:**  
+- The sections demonstrate a classic triphasic pattern, including:
+  - **Blastemal Component:** Small, round, blue cells with high nuclear-to-cytoplasmic ratios.
+  - **Stromal Component:** Spindle cells with scant cytoplasm, arranged in loose fascicles.
+  - **Epithelial Component:** Forming primitive tubules and structures reminiscent of early glomeruli.
+- No evidence of anaplasia is identified.
+- Immunohistochemistry: Tumor cells are positive for WT1, supporting the diagnosis of Wilms tumor.
+
+**Final Diagnosis:**  
+- Favorable histology Wilms tumor (nephroblastoma) based on biopsy.
+
+**Comment:**  
+- These findings correlate with the clinical and radiologic impressions. Margin status is not applicable in this biopsy specimen.
+
+---
+
+### 4. First Visit Note (Initial Pediatric Oncology Consultation)
+
+**Patient:** [Patient Name]  
+**Age:** 4 years  
+**Date:** [Insert Date]  
+**Chief Complaint:** Left abdominal mass; evaluation for suspected Wilms tumor.
+
+**History of Present Illness:**  
+- The patient’s parent reports that a mass was noticed in the left abdomen approximately 2 weeks ago. There has been no history of pain, fever, or hematuria. No significant weight loss or constitutional symptoms have been observed.
+- The child is otherwise well with normal developmental milestones.
+
+**Past Medical History:**  
+- No significant past illnesses or hospitalizations.
+
+**Family History:**  
+- Non-contributory; no known familial cancers or genetic syndromes.
+
+**Social History:**  
+- Lives at home with parents and one sibling.  
+- Attends preschool; immunizations up-to-date.
+
+**Review of Systems:**  
+- **General:** No fever, fatigue, or weight loss.  
+- **GI:** No vomiting or change in bowel habits.  
+- **GU:** No dysuria or hematuria.  
+- Other systems reviewed and are non-contributory.
+
+**Physical Examination:**  
+- **Vital Signs:** Temperature 98.6°F, HR 100 bpm, BP 100/60 mmHg, RR 20/min.  
+- **General:** Alert and active.  
+- **Abdominal Exam:** Palpable, non-tender mass in the left flank extending into the left upper quadrant. No hepatosplenomegaly.  
+- **Other Systems:** Unremarkable.
+
+**Assessment:**  
+- Suspected Wilms tumor based on physical exam and initial imaging.  
+- Biopsy confirms favorable histology Wilms tumor.
+- Stage appears localized with no evidence of vascular invasion or metastasis.
+
+**Plan:**  
+1. **Preoperative Chemotherapy:**  
+   - Begin regimen with vincristine and dactinomycin as per protocol.
+   - Monitor for treatment-related side effects.
+2. **Follow-up:**  
+   - Schedule interval imaging in 6–8 weeks to assess tumor response.
+   - Multidisciplinary review post-chemotherapy to plan for surgical resection.
+3. **Supportive Care:**  
+   - Arrange meeting with the family to discuss treatment plan, prognosis, and supportive services.
+   - Referral to pediatric nutrition and psychosocial support as needed.
+4. **Education:**  
+   - Provide written information regarding Wilms tumor, chemotherapy side effects, and expected treatment timeline.
+
+**Discussion:**  
+- The family was counseled regarding the diagnosis and the benefits of preoperative chemotherapy in shrinking the tumor and reducing surgical risk. All questions were addressed, and the family is in agreement with the proposed plan.
+
+**Signature:**  
+[Physician Name, MD]  
+Pediatric Oncologist

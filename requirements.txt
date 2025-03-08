@@ -1,0 +1,8 @@
+crewai>=0.20.0
+openai>=1.5.0
+pandas>=2.0.0
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+jsonschema>=4.19.0
+colorama>=0.4.6 
+onnxruntime
