@@ -4,10 +4,52 @@ import csv
 from typing import Dict, Any, List, Optional, Tuple
 import pandas as pd
 from pathlib import Path
-from crewai import Crew
+from crewai import Agent, Task, Crew, Process
+from langchain_openai import AzureChatOpenAI
+from dotenv import load_dotenv
+import logging
 
 from .agents import CancerStagingAgents
 from .tasks import CancerStagingTasks
+
+# Load environment variables
+load_dotenv()
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+def setup_azure_openai():
+    """Configure environment for Azure OpenAI"""
+    
+    # Get Azure configuration
+    api_key = os.getenv("AZURE_API_KEY")
+    endpoint = os.getenv("AZURE_ENDPOINT")
+    api_version = os.getenv("AZURE_API_VERSION") 
+    deployment = os.getenv("AZURE_GPT4O_DEPLOYMENT")
+    
+    # Log configuration for debugging
+    logger.info(f"Azure OpenAI Key (first 5 chars): {api_key[:5] if api_key else 'None'}...")
+    logger.info(f"Azure Endpoint: {endpoint}")
+    logger.info(f"Azure API Version: {api_version}")
+    logger.info(f"Azure Deployment: {deployment}")
+    
+    # CRITICAL: Set environment variables in the exact format LiteLLM expects for Azure
+    os.environ["OPENAI_API_TYPE"] = "azure"
+    os.environ["OPENAI_API_KEY"] = api_key
+    os.environ["OPENAI_API_BASE"] = endpoint
+    os.environ["OPENAI_API_VERSION"] = api_version
+    
+    # Clear any regular OpenAI key to avoid confusion
+    if "OPENAI_API_KEY" in os.environ and os.environ["OPENAI_API_KEY"].startswith("sk-"):
+        print("Warning: Removing standard OpenAI API key to avoid conflicts")
+        os.environ["OPENAI_API_KEY"] = api_key
+    
+    # For CrewAI specifically - this is the model format it expects
+    os.environ["AZURE_OPENAI_DEPLOYMENT_NAME"] = deployment
+    
+    print(f"Configured Azure with deployment: {deployment}")
+    return deployment
 
 class PediatricCancerStaging:
     """
@@ -15,17 +57,28 @@ class PediatricCancerStaging:
     using the Toronto staging system.
     """
     
-    def __init__(self, staging_data_path: str, model: str = "gpt-4o-mini"):
+    def __init__(self, staging_data_path="toronto_staging.json", model="gpt-4o-mini"):
         """
         Initialize the staging module.
         
         Args:
-            staging_data_path: Path to the Toronto staging JSON file
-            model: The OpenAI model to use
+            staging_data_path (str): Path to the Toronto staging data JSON file
+            model (str): The Azure OpenAI model deployment name to use
         """
         self.model = model
-        self.staging_data = self._load_staging_data(staging_data_path)
+        
+        # Load the staging data
+        try:
+            with open(staging_data_path, 'r') as f:
+                self.staging_data = json.load(f)
+            print(f"Successfully loaded staging data from {staging_data_path}")
+        except Exception as e:
+            print(f"Error loading staging data: {e}")
+            self.staging_data = {}
+        
+        # Format the model properly for Azure and LiteLLM
         self.agents = CancerStagingAgents(model=model)
+        self.staging_data_path = staging_data_path
         
     def _load_staging_data(self, staging_data_path: str) -> Dict[str, Any]:
         """
@@ -139,7 +192,9 @@ class PediatricCancerStaging:
         crew = Crew(
             agents=[identifier_agent],
             tasks=[identify_task],
-            verbose=True
+            verbose=True,
+            process=Process.sequential,
+            manager_llm=f"{self.model}"
         )
         
         result = crew.kickoff()
@@ -162,7 +217,9 @@ class PediatricCancerStaging:
         crew = Crew(
             agents=[criteria_agent],
             tasks=[criteria_task],
-            verbose=True
+            verbose=True,
+            process=Process.sequential,
+            manager_llm=f"{self.model}"
         )
         
         result = crew.kickoff()
@@ -176,7 +233,9 @@ class PediatricCancerStaging:
         crew = Crew(
             agents=[calculator_agent],
             tasks=[calculate_task],
-            verbose=True
+            verbose=True,
+            process=Process.sequential,
+            manager_llm=f"{self.model}"
         )
         
         result = crew.kickoff()
@@ -201,7 +260,9 @@ class PediatricCancerStaging:
         crew = Crew(
             agents=[reporter_agent],
             tasks=[report_task],
-            verbose=True
+            verbose=True,
+            process=Process.sequential,
+            manager_llm=f"{self.model}"
         )
         
         result = crew.kickoff()

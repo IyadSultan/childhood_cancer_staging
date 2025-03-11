@@ -26,15 +26,28 @@ def disable_crewai_telemetry():
 
 def setup_openai_api():
     """
-    Set up the OpenAI API key from environment variables.
+    Set up the Azure OpenAI API credentials from environment variables.
     """
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("AZURE_API_KEY")
+    endpoint = os.getenv("AZURE_ENDPOINT")
+    api_version = os.getenv("AZURE_API_VERSION")
+    
     if not api_key:
-        print("Error: OPENAI_API_KEY environment variable not set.")
-        print("Please set your OpenAI API key as an environment variable.")
+        print("Error: AZURE_API_KEY environment variable not set.")
         sys.exit(1)
     
-    os.environ["OPENAI_API_KEY"] = api_key
+    if not endpoint:
+        print("Error: AZURE_ENDPOINT environment variable not set.")
+        sys.exit(1)
+    
+    if not api_version:
+        print("Error: AZURE_API_VERSION environment variable not set.")
+        sys.exit(1)
+    
+    # Set environment variables for Azure OpenAI
+    os.environ["AZURE_OPENAI_API_KEY"] = api_key
+    os.environ["AZURE_OPENAI_ENDPOINT"] = endpoint
+    os.environ["AZURE_OPENAI_API_VERSION"] = api_version
 
 def create_project_status(results_path):
     """
@@ -94,13 +107,13 @@ def main():
 
     parser = argparse.ArgumentParser(description="Process medical notes for pediatric cancer staging.")
     parser.add_argument("--note", help="Path to a single medical note to process")
-    parser.add_argument("--staging_data", default="toronoto_staging.json", help="Path to the Toronto staging data JSON file")
+    parser.add_argument("--staging_data", default="toronto_staging.json", help="Path to the Toronto staging data JSON file")
     parser.add_argument("--output", default="results.csv", help="Path to save the CSV results")
-    parser.add_argument("--model", default="gpt-4o-mini", help="OpenAI model to use")
+    parser.add_argument("--model", default="gpt-4o-mini", help="Azure OpenAI model deployment name to use")
     
     args = parser.parse_args()
     
-    # Set up OpenAI API
+    # Set up Azure OpenAI API
     setup_openai_api()
     
     # Check if staging data file exists

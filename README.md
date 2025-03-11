@@ -9,12 +9,14 @@ This module analyzes medical notes to identify cancer types and determine approp
 - Analyzes clinical criteria for staging based on the Toronto system
 - Calculates the appropriate stage based on identified criteria
 - Generates explanations for staging decisions
-- Outputs results to CSV files
+- Outputs results to CSV and markdown files
+- Supports Azure OpenAI API integration
+- Uses LangGraph for the workflow orchestration
 
 ## Requirements
 
 - Python 3.8+
-- OpenAI API key
+- Azure OpenAI API access
 - Required packages (see requirements.txt)
 
 ## Installation
@@ -36,18 +38,85 @@ This module analyzes medical notes to identify cancer types and determine approp
    ```
    pip install -r requirements.txt
    ```
-5. Set up your OpenAI API key as an environment variable:
+5. Set up your Azure OpenAI API credentials as environment variables:
    ```
    # Windows
-   set OPENAI_API_KEY=your_api_key_here
+   set AZURE_OPENAI_API_KEY=your_api_key_here
+   set AZURE_OPENAI_ENDPOINT=your_azure_endpoint_here
+   set AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name_here
+   set AZURE_OPENAI_API_VERSION=2023-05-15
    
    # Linux/Mac
-   export OPENAI_API_KEY=your_api_key_here
+   export AZURE_OPENAI_API_KEY=your_api_key_here
+   export AZURE_OPENAI_ENDPOINT=your_azure_endpoint_here
+   export AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name_here
+   export AZURE_OPENAI_API_VERSION=2023-05-15
    ```
    Alternatively, create a `.env` file in the project root with:
    ```
-   OPENAI_API_KEY=your_api_key_here
+   AZURE_OPENAI_API_KEY=your_api_key_here
+   AZURE_OPENAI_ENDPOINT=your_azure_endpoint_here
+   AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name_here
+   AZURE_OPENAI_API_VERSION=2023-05-15
    ```
+
+## Using Alternative LLM Providers
+
+This codebase currently uses Azure OpenAI, but it can be easily adapted to use other LLM providers:
+
+### Converting to OpenAI
+
+To use standard OpenAI API instead of Azure:
+
+1. Modify `src/azure_openai_config.py` to initialize standard OpenAI:
+   ```python
+   from langchain_openai import ChatOpenAI
+   
+   def configure_openai():
+       """Configure standard OpenAI API"""
+       api_key = os.getenv("OPENAI_API_KEY")
+       model_name = os.getenv("OPENAI_MODEL_NAME", "gpt-4o-mini")
+       
+       # Set up standard ChatOpenAI
+       return ChatOpenAI(
+           model=model_name,
+           temperature=0.0,
+           openai_api_key=api_key
+       )
+   ```
+
+2. Update your environment variables:
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   OPENAI_MODEL_NAME=gpt-4o-mini  # or your preferred model
+   ```
+
+### Using Anthropic, Cohere or Other Providers
+
+LangChain supports many LLM providers. Here's how to modify for a different provider:
+
+1. Install the relevant package:
+   ```
+   pip install langchain-anthropic  # for Anthropic
+   pip install langchain-cohere     # for Cohere
+   ```
+
+2. Modify the configuration:
+   ```python
+   from langchain_anthropic import ChatAnthropic
+   
+   def configure_anthropic():
+       """Configure Anthropic Claude"""
+       api_key = os.getenv("ANTHROPIC_API_KEY")
+       
+       return ChatAnthropic(
+           model="claude-3-opus-20240229",
+           temperature=0.0,
+           anthropic_api_key=api_key
+       )
+   ```
+
+For more information on supported LLM providers, refer to the [LangChain documentation](https://python.langchain.com/docs/integrations/llms/).
 
 ## Usage
 
@@ -62,16 +131,8 @@ python run_example.py
 # Process a different medical note
 python run_example.py --note path/to/medical_note.txt --output results.csv
 
-# Use a different staging data file
-python run_example.py --staging_data path/to/staging_data.json
-```
-
-### Using the Main Script
-
-For more options, you can use the main script:
-
-```
-python main.py --note path/to/medical_note.txt --output results.csv --staging_data path/to/staging_data.json
+# With verbose output
+python run_example.py --verbose
 ```
 
 ### Command-line Arguments
@@ -79,58 +140,64 @@ python main.py --note path/to/medical_note.txt --output results.csv --staging_da
 #### run_example.py
 - `--note`: Path to the medical note to process (default: example.txt)
 - `--output`: Path to save the CSV results (default: results.csv)
-- `--staging_data`: Path to the Toronto staging data file (default: toronoto_staging.json)
+- `--verbose`: Enable verbose agent output (default: True)
 
-#### main.py
-- `--note`: Path to the medical note to process (default: example.txt)
-- `--staging_data`: Path to the Toronto staging JSON file (default: toronoto_staging.json)
-- `--output`: Path to save the CSV results (default: results.csv)
-- `--model`: OpenAI model to use (default: gpt-4o-mini)
+## LangGraph Workflow
 
-## Staging Data
+This project uses LangGraph for workflow orchestration. The workflow consists of the following steps:
 
-The module uses the Toronto staging system for pediatric cancers stored in `toronoto_staging.json`. This file contains comprehensive staging information for 15 different pediatric cancer types, with criteria, stages, and definitions for each type.
+1. Identify cancer type from medical note
+2. Map to standardized cancer type
+3. Analyze staging criteria if cancer is covered by Toronto system
+4. Calculate cancer stage based on criteria
+5. Generate comprehensive staging report
 
-The module will automatically attempt to fix any JSON syntax errors if they are encountered when loading the staging data.
+To learn more about LangGraph:
+- [LangGraph Documentation](https://python.langchain.com/docs/langgraph/)
+- [LangGraph State Management](https://python.langchain.com/docs/langgraph/state/)
+- [Advanced LangGraph Patterns](https://python.langchain.com/docs/langgraph/advanced_patterns/)
 
 ## Output Format
 
-The module produces a CSV file with the following columns:
+The module produces both a CSV file and a detailed markdown report:
 
-- `file_name`: Name of the processed medical note file
-- `emr_stage`: Stage mentioned in the medical note (if any)
-- `calculated_stage`: Stage calculated based on the Toronto staging system
-- `explanation`: Explanation for the calculated stage
+### CSV Output
+- `Medical Note`: Name of the processed medical note file
+- `Cancer Type`: Identified cancer type
+- `Standardized Category`: Standardized cancer category
+- `Primary Site`: Primary site of the cancer
+- `Extracted Stage`: Stage mentioned in the medical note (if any)
+- `Calculated Stage`: Stage calculated based on the Toronto staging system
+- `Sites of Metastasis`: Identified metastasis sites (if any)
+- `Covered by Toronto`: Whether the cancer type is covered by the Toronto system
+- `Date Processed`: Date when the note was processed
+
+### Markdown Report
+A comprehensive report that includes:
+- Cancer information details
+- Staging information
+- Detailed staging explanation
+- Full staging report
+- The complete medical note
 
 ## Project Structure
 
 ```
 .
-├── main.py                  # Main script to run the module
-├── run_example.py           # Simplified script for easy testing
-├── requirements.txt         # Required packages
-├── README.md                # This file
-├── project_status.md        # Current project status
-├── example.txt              # Example medical note
-├── toronoto_staging.json    # Toronto staging system data
-├── .env.example             # Example environment file
-└── src/                     # Source code
-    ├── __init__.py          # Package initialization
-    ├── agents.py            # Agent definitions
-    ├── tasks.py             # Task definitions
-    └── staging_module.py    # Main staging module
+├── main.py                     # Main script to run the module
+├── run_example.py              # Simplified script for easy testing
+├── requirements.txt            # Required packages
+├── README.md                   # This file
+├── project_status.md           # Current project status
+├── example.txt                 # Example medical note
+├── toronto_staging.json        # Toronto staging system data
+├── .env                        # Environment variables
+└── src/                        # Source code
+    ├── __init__.py             # Package initialization
+    ├── azure_openai_config.py  # Azure OpenAI configuration
+    ├── cancer_staging_graph.py # LangGraph definition
+    └── utils.py                # Utility functions
 ```
-
-## How It Works
-
-The module uses a series of AI agents, implemented with the CrewAI framework, to process medical notes:
-
-1. **Cancer Identifier Agent**: Identifies the cancer type and any EMR stage mentioned
-2. **Criteria Analyzer Agent**: Identifies which staging criteria are present in the notes
-3. **Stage Calculator Agent**: Calculates the appropriate stage based on identified criteria
-4. **Report Generator Agent**: Generates explanations for staging decisions
-
-Each agent performs a specific task in the staging workflow, working together to produce accurate staging results.
 
 ## Supported Cancer Types
 

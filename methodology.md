@@ -22,7 +22,7 @@ The Toronto staging data was generated using a two-phase approach:
 2. **Data Refinement**:
    - The initial JSON file required structural fixes to ensure proper JSON syntax
    - A fixed version of the staging data was created with proper JSON structure while preserving all the original content
-   - Finally, the fixed data was consolidated into a single, comprehensive file (`toronoto_staging.json`) containing staging information for 15 different pediatric cancer types
+   - Finally, the fixed data was consolidated into a single, comprehensive file (`toronto_staging.json`) containing staging information for 15 different pediatric cancer types
 
 The prompt used for initial data extraction was:
 ```
@@ -141,7 +141,7 @@ flowchart TB
 
     %% Input Data
     InputMedicalNote[["📋 Medical Note\n(example.txt)"]]:::dataNode
-    StagingData[["📊 Toronto Staging Data\n(toronoto_staging.json)"]]:::dataNode
+    StagingData[["📊 Toronto Staging Data\n(toronto_staging.json)"]]:::dataNode
     
     %% User Initiating Process
     User["👤 User\nruns script"]:::processNode

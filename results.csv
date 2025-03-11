@@ -1,7 +1,2 @@
-file_name,emr_stage,calculated_stage,explanation
-example.txt,Not provided,y-I,"The patient's Wilms tumor (nephroblastoma) meets the criteria for Stage y-I according to the Toronto staging system. The essential points are as follows: 
-1. The tumor is confined to the kidney, as there is no evidence of vascular invasion per the radiology report and imaging indicates that the mass is solitary and well-circumscribed without surrounding infiltration. 
-2. Preoperative chemotherapy is indicated and documented, which is part of the SIOP protocol, allowing staging in the y-stage category. 
-3. There is evidence of a favorable histology with no anaplasia noted in the pathology findings, which further supports a better prognosis and staging position.
-4. The biopsy indicates classic triphasic Wilms tumor but does not demonstrate complete excision as surgery has not yet taken place, suggesting that the tumor was not completely excised at the time of reporting. However, after chemotherapy and subsequent surgery, if the tumor remains confined to the kidney as implied, it would confirm Stage y-I.
-Given that the tumor is treated under SIOP guidelines and remains confined while fully resected after chemotherapy, Stage y-I is the most fitting conclusion based on the information provided in the medical notes."
+Medical Note,Cancer Type,Standardized Category,Primary Site,Extracted Stage,Calculated Stage,Sites of Metastasis,Covered by Toronto,Date Processed
+example.txt,Wilms Tumor,Renal Tumors,Left Kidney,Not mentioned,Stage I,None identified,Yes,2025-03-11
