@@ -2,6 +2,9 @@
 
 This module analyzes medical notes to identify cancer types and determine appropriate staging using the Toronto staging system for pediatric cancers.
 
+## Use this calculator online
+https://stagecalculator.replit.app/ 
+
 ## Features
 
 - Identifies the cancer type from medical notes
